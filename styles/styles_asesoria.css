@@ -1,0 +1,268 @@
+/* Estilo global: Definición de márgenes y tipografía */
+body {
+    margin: 0;
+    background-color: #f9f9f9;
+    background-image: url("../images/fitness.png"); /* Imagen de fondo */
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Header: Estilo del encabezado principal con el logo y la navegación */
+.header {
+    background-color: #3f444a;
+    color: #fff;
+    padding: 15px 20px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Navegación: Diseño del menú y los enlaces */
+.nav ul {
+    display: flex;
+    gap: 90px;
+    list-style: none;
+    margin: 0;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: bold;
+    display: block;
+    font-size: 1.2rem;
+}
+
+/* Acciones: Estilo para los botones y los íconos de redes sociales */
+.acciones {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.boton {
+    background-color: #ffd700;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.iconos-redes a img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Sección Asesoría */
+.asesoria {
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 50px 0;
+}
+
+.asesoria-info {
+    padding: 30px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #2d3436;
+}
+
+.descripcion {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.beneficios {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.beneficio {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 32%;
+}
+
+.beneficio h3 {
+    font-size: 1.5rem;
+    color: #ffd700;
+}
+
+.testimonios {
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 40px 0;
+    text-align: center;
+}
+
+.testimonio {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px ;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cita {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #555;
+}
+
+/* Frase encima de footer */
+.frase {
+    background-color: #ffd700;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.frase h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.frase .boton {
+    background-color: #2d3436;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+    background-color: #2d3436;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .nav ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container1 { 
+        display: flex; 
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 20px; 
+        margin-right: 40px;
+    }
+
+    .acciones {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .beneficios {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .asesoria-info {
+        margin-right: 30px; /* Ajusta el valor según sea necesario */
+    }
+
+    .beneficio {
+        width: 100%;
+    }
+
+    .titulo {
+        font-size: 2rem;
+    }
+
+    .descripcion {
+        font-size: 1rem;
+    }
+
+    .frase h2 {
+        font-size: 2rem;
+    }
+
+    .frase .boton {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    /* Agregar estilos responsivos para imágenes */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Ajustes para formularios */
+    input, textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav a {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+
+    .boton {
+        padding: 8px 15px;
+        font-size: 1rem;
+    }
+
+    .testimonio {
+        width: 90%;
+    }
+
+    .cita {
+        font-size: 1rem;
+    }
+    /* Ajustes adicionales para mejorar la responsividad */
+    .titulo {
+        font-size: 1.5rem;
+    }
+
+    .descripcion {
+        font-size: 0.9rem;
+    }
+
+    .frase h2 {
+        font-size: 1.5rem;
+    }
+
+    .frase .boton {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}

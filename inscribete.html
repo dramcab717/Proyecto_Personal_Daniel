@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Enlaces a fuentes externas de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Información meta y enlace al archivo de estilo -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Fitness Park Inscríbete </title>
+    <link rel="stylesheet" href="./styles/styles_inscribete.css">
+</head>
+<body>
+    <!-- Header con el logo (Si se pulsa en el logo le lleva al inicio) y la navegación -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./images/logogym.png" alt="LogoGym">
+                </a>
+            </div>
+            <nav class="nav">
+                <!-- Menú de navegación con enlaces a otras páginas -->
+                <ul>
+                    <li><a href="./asesoria.html"> Asesoría </a> </li>
+                    <li><a href="./entrenamiento.html"> Entrenamiento </a> </li>
+                    <li><a href="./clubs.html"> Clubs </a> </li>
+                </ul>
+            </nav>
+            <!-- Acceso a las redes sociales del Gimnasio -->
+            <div class="acciones">
+                <a href="./inscribete.html" class="boton"> INSCRÍBETE </a>
+                <div class="iconos-redes">
+                    <!-- Enlaces a las redes sociales con sus iconos -->
+                    <a href="https://www.tiktok.com/@fitnessparkspain?lang=es" target="_blank" class="e">
+                        <img src="images/tiktok.png" alt="TikTok">
+                    </a>
+                    <a href="https://www.instagram.com/fitnessparkspain/" target="_blank">
+                        <img src="images/instagram.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.youtube.com/c/FitnessParkEspa%C3%B1a" target="_blank">
+                        <img src="images/youtube.png" alt="YouTube">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Formulario de Inscripción -->
+    <main>
+        <section class="form-container">
+            <h1>Inscríbete al Gimnasio</h1>
+            <!-- Formulario con varios campos para la inscripción -->
+            <form action="#" method="POST">
+                <!-- Campo para el nombre del usuario -->
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="50"
+                    pattern="[A-Za-záéíóúÁÉÍÓÚ\s]+" placeholder="Introduce tu nombre"
+                    title="El nombre solo puede contener letras y espacios.">
+
+                <!-- Campo para el apellido del usuario -->
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required minlength="3" maxlength="50"
+                    pattern="[A-Za-záéíóúÁÉÍÓÚ\s]+" placeholder="Introduce tu apellido"
+                    title="El apellido solo puede contener letras y espacios.">
+
+                <!-- Campo para el correo electrónico del usuario -->
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required placeholder="ejemplo@dominio.com"
+                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                    title="Introduce un correo electrónico válido.">
+
+                <!-- Campo para el número de teléfono -->
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{9}" placeholder="555123456"
+                    title="Introduce un número de teléfono de 9 dígitos (sin espacios ni guiones).">
+
+                <!-- Campo para la fecha de nacimiento (debe ser mayor de 18 años) -->
+                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required min="1900-01-01"
+                    max="2006-12-31" title="Debes tener al menos 18 años de edad.">
+
+                <!-- Selección del género -->
+                <label for="genero">Género:</label>
+                <select id="genero" name="genero" required>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="otro">Otro</option>
+                </select>
+
+                <!-- Campo para la dirección -->
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required minlength="5" maxlength="100"
+                    placeholder="Introduce tu dirección" title="La dirección debe tener al menos 5 caracteres.">
+
+                <!-- Campo para el objetivo de entrenamiento -->
+                <label for="objetivo">Objetivo de entrenamiento:</label>
+                <textarea id="objetivo" name="objetivo" required minlength="10" maxlength="300"
+                    placeholder="Escribe tus objetivos..."
+                    title="El objetivo debe tener al menos 10 caracteres."></textarea>
+
+                <!-- Selección del nivel de experiencia -->
+                <label for="experiencia">Nivel de experiencia:</label>
+                <select id="experiencia" name="experiencia" required>
+                    <option value="principiante">Principiante</option>
+                    <option value="intermedio">Intermedio</option>
+                    <option value="avanzado">Avanzado</option>
+                </select>
+
+                <!-- Casilla para aceptar los términos y condiciones -->
+                <label for="acuerdo">Acepto los términos y condiciones:</label>
+                <input type="checkbox" id="acuerdo" name="acuerdo" required
+                    title="Debes aceptar los términos y condiciones.">
+
+                <!-- Botón para enviar el formulario -->
+                <button type="submit" class="boton">Enviar Inscripción</button>
+            </form>
+        </section>
+    </main>
+    <!-- Pie de página con derechos de autor -->
+    <footer class="footer">
+        &copy; 2024 Daniel Ramírez Cabello. Todos los derechos reservados.
+    </footer>
+</body>
+</html>
